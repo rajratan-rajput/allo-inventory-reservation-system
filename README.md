@@ -19,7 +19,7 @@
 # 🌐 Live Demo
 
 🔗 **Production URL:**
-`<Yhttps://allo-inventory-reservation-systems.vercel.app/>`
+Yhttps://allo-inventory-reservation-systems.vercel.app
 
 ---
 
