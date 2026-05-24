@@ -273,7 +273,23 @@ export class ReservationService {
       // 1. Fetch reservation info first WITHOUT lock
       const res = await tx.reservation.findUnique({
         where: { id },
-      });
+        include: {
+            product: {
+            select: {
+                id: true,
+                name: true,
+                price: true,
+            },
+            },
+            warehouse: {
+            select: {
+                id: true,
+                name: true,
+                location: true,
+            },
+            },
+        },
+        });
 
       if (!res) {
         throw new NotFoundError(`Reservation with ID ${id} not found.`);
